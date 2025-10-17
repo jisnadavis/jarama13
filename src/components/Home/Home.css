@@ -1,0 +1,100 @@
+.Homecontainer {
+  position: absolute;
+  top: 90px;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Homecontainer h1 {
+  text-decoration-style: double;
+  text-shadow: 5px 5px 5px gray;
+  position: absolute;
+  top: 100px;
+}
+.background-image {
+  width: 100%;
+  height: 74svh;
+  opacity: 0.5;
+}
+.animation-container {
+  overflow-x: hidden;
+  font-family: Helvetica;
+  position: absolute;
+  top: 240px;
+  color: #fff;
+  background: #b39b9b;
+  margin: 20px 0px;
+}
+.animation-container > div {
+  width: 100%;
+
+  text-align: center;
+  animation: gradient 2.4s infinite ease-in-out;
+  letter-spacing: 10px;
+  white-space: nowrap;
+  font-size: 20px;
+  text-indent: 10px;
+}
+.a01 {
+  animation-delay: 0.1s;
+}
+.a02 {
+  animation-delay: 0.2s;
+}
+
+@keyframes gradient {
+  0% {
+    letter-spacing: 4px;
+    text-indent: 10px;
+  }
+  40% {
+    letter-spacing: 10px;
+    text-indent: 50px;
+  }
+
+  80% {
+    letter-spacing: 4px;
+    text-indent: 10px;
+  }
+
+  100% {
+    letter-spacing: 4px;
+    text-indent: 10px;
+  }
+}
+@media (max-width: 900px) {
+  .animation-container {
+    width: 100%;
+  }
+}
+@media (max-width: 532px) {
+  .Homecontainer {
+    top: 180px;
+  }
+  .animation-container {
+    width: 80%;
+  }
+  @keyframes gradient {
+    0% {
+      letter-spacing: 1px;
+      text-indent: 10px;
+    }
+    40% {
+      letter-spacing: 3px;
+      text-indent: 50px;
+    }
+
+    80% {
+      letter-spacing: 1px;
+      text-indent: 10px;
+    }
+
+    100% {
+      letter-spacing: 1px;
+      text-indent: 10px;
+    }
+  }
+}

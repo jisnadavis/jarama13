@@ -1,0 +1,76 @@
+.update-product-container {
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-evenly;
+  height: fit-content;
+  align-items: center;
+  gap: var(--ppk-gap-m);
+  color: black;
+  padding: var(--ppk-padding-l);
+}
+.update-product-container button {
+  width: 100px;
+  height: 37px !important;
+  border: none;
+  border-radius: 15px;
+}
+.productupdate {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: space-evenly;
+}
+.filter_update {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+  gap: var(--ppk-gap-m);
+  padding: var(--ppk-padding-m);
+}
+.productupdateformm {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-evenly;
+  gap: var(--ppk-gap-s);
+  padding: var(--ppk-padding-l);
+}
+.productupdateformm input {
+  width: 300px;
+  height: 40px;
+  border-radius: 18px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+.productupdateformm button {
+  width: 120px;
+  padding: var(--ppk-padding-s);
+  height: 40px !important;
+  background-color: rgb(175, 175, 221) !important;
+  text-align: center;
+}
+.updateproductdetail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--ppk-gap-m);
+}
+.updateproductdetail button {
+  width: 120px;
+  padding: var(--ppk-padding-s);
+  height: 40px !important;
+  background-color: rgb(211, 68, 68);
+  text-align: center;
+}

@@ -1,0 +1,50 @@
+.category-filter {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  align-content: space-evenly;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ppk-gap-m);
+  font-size: large;
+}
+.category-filter select {
+  width: 300px;
+  border: none;
+  border-radius: 15px;
+  height: 35px;
+  text-align-last: center;
+}
+
+.category-filter button {
+  width: 100px;
+
+  background-color: rgb(80, 182, 80);
+  border-radius: 10px;
+  height: 30px;
+}
+.filterdproducts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  background-color: aliceblue;
+  gap: var(--ppk-gap-m);
+  padding: var(--ppk-padding-m);
+}
+.gobackk {
+  padding: var(--ppk-padding-s);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.gobackk button {
+  width: 100px;
+  border: none;
+  background-color: brown;
+  height: 35px;
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
+}

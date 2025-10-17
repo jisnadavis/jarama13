@@ -1,0 +1,19 @@
+.productparticular {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+}
+.productdescription {
+  display: flex;
+  width: 200px;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px dotted rgb(169, 118, 216);
+  padding: 10px;
+  height: 320px;
+  text-align: center;
+  font-size: 14px;
+  align-items: center;
+}

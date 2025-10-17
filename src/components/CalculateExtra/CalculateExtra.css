@@ -1,0 +1,52 @@
+.selectdate_calculateextra {
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  justify-content: center;
+  gap: 20px !important;
+  background-color: #f9f9f9;
+}
+.calculate {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: fit-content;
+}
+.date-filters {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  align-content: space-evenly;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+}
+.date-filters label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.date-filters input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.date-filters button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  width: 100px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+@media (max-width: 450px) {
+  .date-filters {
+    width: 300px;
+  }
+}

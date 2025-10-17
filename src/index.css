@@ -1,0 +1,34 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Lobster', sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  background-color: rgb(225, 229, 231);
+  color: black;
+}
+:root {
+  /* padding  */
+  --ppk-padding-s: 10px;
+  --ppk-padding-m: 20px;
+  --ppk-padding-l: 30px;
+  --ppk-padding-xl: 40px;
+  /* margin */
+  --ppk-margin-s: 10px;
+  --ppk-margin-m: 20px;
+  --ppk-margin-l: 30px;
+  --ppk-margin-xl: 40px;
+  /* gap */
+  --ppk-gap-xs: 10px;
+  --ppk-gap-s: 20px;
+  --ppk-gap-m: 30px;
+  --ppk-gap-l: 40px;
+  --ppk-gap-xl: 50px;
+}
+html,
+body {
+  overflow-x: hidden;
+}

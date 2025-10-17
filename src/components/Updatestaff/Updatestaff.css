@@ -1,0 +1,75 @@
+.update-staff {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.staff-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 10px;
+  width: 500px !important;
+  background-color: rgb(24, 201, 201) !important;
+}
+.staff-item {
+  display: flex;
+  justify-content: space-between !important;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.staff-item button {
+  padding: 5px 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.staff-item h2 {
+  width: 100px;
+  font-size: 16px;
+}
+.staff-item:hover {
+  background-color: #e0e0e0;
+}
+.staff-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 500px;
+
+  align-items: center;
+}
+.staff-form input,
+select {
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  text-align: center;
+}
+.staff-form button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.staff-form button.cancelupdatestaff {
+  background-color: #f44336;
+}
+@media (max-width: 537px) {
+  .staff-list {
+    width: 300px !important;
+  }
+  .staff-form {
+    width: 300px;
+  }
+}

@@ -1,0 +1,85 @@
+.register-formcontainer {
+  position: absolute;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding: var(--ppk-padding-m);
+  width: 100%;
+  gap: 20px;
+  height: fit-content;
+}
+.loading-image {
+  width: 100px;
+  height: 100px;
+}
+.register-form {
+  display: flex;
+  padding: var(--ppk-padding-m);
+  flex-direction: column;
+  gap: 15px;
+  width: 500px;
+  margin: 0 auto;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.register-form label {
+  font-weight: bold;
+}
+.register-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+.register-form button {
+  cursor: pointer;
+
+  font-size: 18px;
+  padding: 10px;
+  background-color: #5ee463;
+  color: white;
+  border-radius: 15px;
+  border: none;
+}
+.successs {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: var(--ppk-gap-m);
+}
+.successs button {
+  cursor: pointer;
+  font-size: 18px;
+  padding: 10px;
+  width: 100px;
+  background-color: #5ee463;
+  color: white;
+  border-radius: 15px;
+  border: none;
+}
+.registererror {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  align-items: center;
+  gap: var(--ppk-gap-m);
+}
+@media (max-width: 528px) {
+  .register-form {
+    width: 350px;
+  }
+  .register-form input {
+    width: 300px;
+  }
+  .register-form label {
+    width: 300px;
+  }
+}

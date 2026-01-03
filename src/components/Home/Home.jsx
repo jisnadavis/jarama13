@@ -19,7 +19,7 @@ const Home = () => {
           </p>
           <div className='imagehome'></div>
           <a
-            href='https://mail.google.com/mail/?view=cm&fs=1&to=jaramacatering@gmail.com'
+            href='https://mail.google.com/mail/?view=cm&fs=1&to=chippyalbin2@gmail.com'
             target='_blank'
             rel='noopener noreferrer'
           >
@@ -32,7 +32,7 @@ const Home = () => {
           <p>Be part of our professional kitchen and service team.</p>
           <div className='imagehome1'></div>
           <a
-            href='https://mail.google.com/mail/?view=cm&fs=1&to=jaramacatering@gmail.com'
+            href='https://mail.google.com/mail/?view=cm&fs=1&to=chippyalbin2@gmail.com'
             target='_blank'
             rel='noopener noreferrer'
           >

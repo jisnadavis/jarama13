@@ -59,20 +59,20 @@ const Activity = () => {
       ['Create Product', 'createProduct'],
       ['Update Product', 'updateProduct'],
       ['Delete Product', 'deleteProduct'],
-      ['Ver Horario', 'getHorario'],
-      ['Create Horario', 'createHorario'],
+      ['View Schedule', 'getHorario'],
+      ['Create Schedule', 'createHorario'],
       ['Get Extra', 'getExtra'],
-      ['Apuntar Extra', 'apuntarExtra'],
-      ['Update Horario', 'updateHorario'],
-      ['Calcula Extra Month', 'calculateExtra']
+      ['Record Overtime', 'apuntarExtra'],
+      ['Update Schedule', 'updateHorario'],
+      ['Calculate Extra Month', 'calculateExtra']
     ],
     'jefe de sala': [
-      ['Ver Horario', 'getHorario'],
-      ['Create Horario', 'createHorario'],
+      ['View Schedule', 'getHorario'],
+      ['Create Schedule', 'createHorario'],
       ['Get Extra', 'getExtra'],
-      ['Apuntar Extra', 'apuntarExtra'],
-      ['Update Horario', 'updateHorario'],
-      ['Calcula Extra Month', 'calculateExtra']
+      ['Record Overtime', 'apuntarExtra'],
+      ['Update Schedule', 'updateHorario'],
+      ['Calculate Extra Month', 'calculateExtra']
     ],
     administrador: [
       ['Get Products', 'getProducts'],
@@ -80,22 +80,22 @@ const Activity = () => {
       ['Update Staff Role', 'updateStaff'],
       ['Delete Staff', 'deleteStaff'],
       ['Get Extra', 'getExtra'],
-      ['Apuntar Extra', 'apuntarExtra'],
-      ['Calcula Extra Month', 'calculateExtra']
+      ['Record Overtime', 'apuntarExtra'],
+      ['Calculate Extra Month', 'calculateExtra']
     ],
     'event organizer': [
       ['Create Events', 'createEvent'],
       ['Update Events', 'updateEvent'],
       ['Delete Events', 'deleteEvent'],
-      ['Apuntar Extra', 'apuntarExtra'],
+      ['Record Overtime', 'apuntarExtra'],
       ['Get Extra', 'getExtra'],
       ['Calcula Extra Month', 'calculateExtra']
     ],
     default: [
-      ['Ver Horario', 'getHorario'],
-      ['Apuntar Extra', 'apuntarExtra'],
+      ['View Schedule', 'getHorario'],
+      ['Record Overtime', 'apuntarExtra'],
       ['Get Extra', 'getExtra'],
-      ['Calcula Extra Month', 'calculateExtra'],
+      ['Calculate Extra Month', 'calculateExtra'],
       ['Get Products', 'getProducts'],
       ['Get Products by Category', 'getProductsByCategory']
     ]

@@ -112,8 +112,18 @@ const ApuntarExtra = () => {
           <input
             id='hours'
             type='number'
+            max={24}
             {...register('hours', {
-              required: 'Please enter your extra hours'
+              required: 'Please enter your extra hours',
+              valueAsNumber: true,
+              max: {
+                value: 24,
+                message: 'Maximum allowed hours is 24'
+              },
+              min: {
+                value: 1,
+                message: 'Hours must be at least 1'
+              }
             })}
           />
           {errors.hours && (

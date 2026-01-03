@@ -1,18 +1,44 @@
 import React from 'react'
 import './Home.css'
+
 const Home = () => {
   return (
     <div className='Homecontainer'>
-      <img
-        className='background-image'
-        src='https://images.squarespace-cdn.com/content/v1/5e29c65c4c22026b05a85704/1589220793923-SO1JPZ8ZS756B2831F6I/Cafe+Website+Background+straight+lines-06.png'
-        alt='Background'
-      />
+      <h1 className='heading'> Welcome to Jarama Catering</h1>
 
-      <h1 className='heading'> Impulsa tu Carrera en la Hostelería:</h1>
-      <div className='animation-container'>
-        <div className='a01'>La felicidad empieza</div>
-        <div className='a02'>a traves del paladar</div>
+      <h2 className='subheading'>
+        Manage your tasks and stay up to date in the restaurant
+      </h2>
+
+      <div className='description'>
+        <div className='details'>
+          <h3>Services</h3>
+          <p>
+            We organize weddings, corporate events, and personalized
+            celebrations with an expert team.
+          </p>
+          <div className='imagehome'></div>
+          <a
+            href='https://mail.google.com/mail/?view=cm&fs=1&to=jaramacatering@gmail.com'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <button>Contact Us</button>
+          </a>
+        </div>
+
+        <div className='details'>
+          <h3>Join Our Team</h3>
+          <p>Be part of our professional kitchen and service team.</p>
+          <div className='imagehome1'></div>
+          <a
+            href='https://mail.google.com/mail/?view=cm&fs=1&to=jaramacatering@gmail.com'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <button>Send CV</button>
+          </a>
+        </div>
       </div>
     </div>
   )

@@ -134,8 +134,6 @@ const Updateproduct = () => {
             ))}
           </select>
           <button onClick={handleSearchClick}>Search</button>
-
-          <button onClick={handleSearchClick}>Search</button>
         </>
       )}
 

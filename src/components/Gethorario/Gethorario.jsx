@@ -85,7 +85,7 @@ const Gethorario = () => {
 
   return (
     <div className='horario-container'>
-      <h2>Get Horario</h2>
+      <h2>View Schedule</h2>
 
       <label>Select Date:</label>
       <input
@@ -93,7 +93,7 @@ const Gethorario = () => {
         value={selectedDate}
         onChange={(e) => setSelectedDate(e.target.value)}
       />
-      <button onClick={fetchHorario}>Fetch Horario</button>
+      <button onClick={fetchHorario}>fetch schedule</button>
 
       {loading && <p>Loading...</p>}
 

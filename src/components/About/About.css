@@ -1,71 +1,88 @@
 .aboutcontainer {
-  position: absolute;
-  top: 130px;
-  gap: var(--ppk-gap-m);
-  padding: 30px;
+  position: relative;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  align-content: center;
   align-items: center;
-  flex-wrap: wrap;
-
-  height: fit-content;
+  gap: 40px;
+  width: 100%;
+  background: linear-gradient(135deg, #fff5f8, #ffffff);
+  animation: fadeIn 0.8s ease-in-out;
 }
-.aboutcontainer h2 {
-  min-width: 300px;
 
-  padding: 10px;
+.aboutcontainer h2 {
+  max-width: 900px;
   text-align: center;
-  justify-content: center;
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 600;
+  color: #2a2a2a;
+  line-height: 1.4;
+}
+.aboutcontainer p {
+  max-width: 700px;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+  background: white;
+  padding: 10px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 .aboutlist {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 40px;
-
-  height: 270px;
-  align-items: center;
-  min-width: 350px;
-  justify-content: center;
+  background: white;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 .aboutlist ul {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 20px;
-  text-align: justify;
-  justify-content: center;
-  align-content: center;
+  padding: 0;
+  margin: 0;
 }
+
 .aboutlist ul li {
-  animation: aboutlist 1s ease-in-out infinite;
-  text-align: justify;
-  padding: 10px;
+  list-style: none;
+  font-size: 17px;
+  padding: 15px 20px;
+  border-radius: 12px;
+  background: #f9f9f9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-@keyframes aboutlist {
-  0% {
-    transform: translateY(0px);
+
+.aboutlist ul li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(228, 54, 106, 0.25);
+  background: #fff;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0px);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-.aboutcontainer p {
-  padding: 10px;
-  text-align: center;
-  justify-content: center;
-  max-width: 600px;
-  min-width: 300px;
-  font-size: 16px;
-}
+
 @media (max-width: 600px) {
   .aboutcontainer {
-    font-size: 12px;
+    padding: 40px 15px;
+  }
+
+  .aboutcontainer p {
+    font-size: 16px;
+    padding: 20px;
+  }
+
+  .aboutlist {
+    padding: 20px;
+  }
+
+  .aboutlist ul li {
+    font-size: 15px;
   }
 }

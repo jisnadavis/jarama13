@@ -4,15 +4,17 @@ import './Createhorario.css'
 
 const Createhorario = () => {
   const { loading, data, fetchdata, error } = Usefetch()
+
   const [selectedStaff, setSelectedStaff] = useState(null)
   const [startDate, setStartDate] = useState('')
   const [horarioData, setHorarioData] = useState([])
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const endpoint = '/api/v1/staffs'
+  const staffEndpoint = '/api/v1/staffs'
+  const horarioEndpoint = '/api/v1/horario/'
   const token = localStorage.getItem('token')
 
-  const options = {
+  const staffOptions = {
     method: 'GET',
     headers: {
       Authorization: `Bearer ${token}`
@@ -20,12 +22,11 @@ const Createhorario = () => {
   }
 
   useEffect(() => {
-    fetchdata(endpoint, options)
+    fetchdata(staffEndpoint, staffOptions)
   }, [])
 
   const formatDate = (date, daysToAdd = 0) => {
     if (!date) return ''
-
     const d = new Date(date)
     d.setDate(d.getDate() + daysToAdd)
 
@@ -73,15 +74,20 @@ const Createhorario = () => {
     setHorarioData(updatedHorario)
   }
 
+  const resetForm = () => {
+    setSelectedStaff(null)
+    setStartDate('')
+    setHorarioData([])
+  }
+
   const handleSubmit = async () => {
     if (!selectedStaff || !startDate) {
-      alert('Please select a staff member and start date.')
+      alert('Please select staff and start date')
       return
     }
 
     setIsSubmitting(true)
 
-    const endpoint = '/api/v1/horario/'
     const options = {
       method: 'POST',
       headers: {
@@ -91,20 +97,19 @@ const Createhorario = () => {
       body: JSON.stringify(horarioData)
     }
 
-    console.log('Final Horario Data:', JSON.stringify(horarioData, null, 2))
-
     try {
-      await fetchdata(endpoint, options)
+      await fetchdata(horarioEndpoint, options)
+
       if (error) {
         alert(`Failed to create horario: ${error}`)
       } else {
-        alert('Horario created successfully!')
-        setSelectedStaff(null)
-        setStartDate('')
-        setHorarioData([])
+        alert('Horario created successfully ✅')
+
+        resetForm()
+        fetchdata(staffEndpoint, staffOptions)
       }
     } catch {
-      alert('Something went wrong creating horario.')
+      alert('Something went wrong')
     }
 
     setIsSubmitting(false)
@@ -112,13 +117,14 @@ const Createhorario = () => {
 
   return (
     <div className='create-horario'>
-      <h1>Create Horario</h1>
+      <h1>Create Schedule</h1>
 
       {!selectedStaff ? (
         <>
           <h2>Select Staff</h2>
+
           {loading && <p className='load'>Loading staff...</p>}
-          {error && <p style={{ color: 'red' }}>Error: {error}</p>}
+          {error && <p style={{ color: 'red' }}>{error}</p>}
 
           <div className='staff-list'>
             {Array.isArray(data) &&
@@ -138,14 +144,10 @@ const Createhorario = () => {
       ) : (
         <>
           <div className='selected-staff'>
-            <button onClick={() => setSelectedStaff(null)}>Go Back</button>
-
-            <section>
-              <h2>
-                {' '}
-                Selected Staff: {selectedStaff.name} {selectedStaff.apellidos}
-              </h2>
-            </section>
+            <button onClick={resetForm}>⬅ Go Back</button>
+            <h2>
+              Selected Staff: {selectedStaff.name} {selectedStaff.apellidos}
+            </h2>
           </div>
 
           <h2>Select Start Date</h2>
@@ -157,41 +159,34 @@ const Createhorario = () => {
 
           {startDate && (
             <div className='horario-preview'>
-              <h2 className='horariostaff'>Horario for {selectedStaff.name}</h2>
+              <h2>Horario for {selectedStaff.name}</h2>
+
               <div className='horario-forms'>
                 {horarioData.map((day, index) => (
                   <div key={index} className='horario-item'>
                     <h3>{day.fecha}</h3>
 
-                    <label>Location (Lugar):</label>
+                    <label>Location</label>
                     <input
                       type='text'
                       value={day.lugar}
                       onChange={(e) =>
                         handleChange(index, 'lugar', e.target.value)
                       }
-                      disabled={
-                        day.status === 'leave' ||
-                        day.status === 'vacaciones' ||
-                        day.status === 'baja'
-                      }
+                      disabled={day.status !== 'on_duty'}
                     />
 
-                    <label>Time:</label>
+                    <label>Time</label>
                     <input
                       type='text'
                       value={day.Time}
                       onChange={(e) =>
                         handleChange(index, 'Time', e.target.value)
                       }
-                      disabled={
-                        day.status === 'leave' ||
-                        day.status === 'vacaciones' ||
-                        day.status === 'baja'
-                      }
+                      disabled={day.status !== 'on_duty'}
                     />
 
-                    <label>Status:</label>
+                    <label>Status</label>
                     <select
                       value={day.status}
                       onChange={(e) =>
@@ -212,11 +207,11 @@ const Createhorario = () => {
 
           {horarioData.length > 0 && (
             <button
+              className='create-horario-button'
               onClick={handleSubmit}
               disabled={isSubmitting}
-              className='create-horario-button'
             >
-              {isSubmitting ? 'Submitting...' : 'Create Horario'}
+              {isSubmitting ? 'Submitting...' : 'Create Schedule'}
             </button>
           )}
         </>

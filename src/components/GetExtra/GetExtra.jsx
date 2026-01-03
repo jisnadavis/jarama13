@@ -56,12 +56,18 @@ const GetExtra = () => {
 
   const handleUpdateExtra = async () => {
     if (!selectedExtra) return
+    const hoursNumber = Number(updatedHours)
+
+    if (hoursNumber < 1 || hoursNumber > 24) {
+      alert('Hours must be between 1 and 24')
+      return
+    }
 
     console.log('Selected Extra ID:', selectedExtra._id)
     console.log('Token:', localStorage.getItem('token'))
 
     const updatedData = {
-      hours: Number(updatedHours),
+      hours: hoursNumber,
       lugar: updatedLugar.trim()
     }
 
@@ -180,8 +186,20 @@ const GetExtra = () => {
             Hours:
             <input
               type='number'
+              min={1}
+              max={24}
               value={updatedHours}
-              onChange={(e) => setUpdatedHours(e.target.value)}
+              onChange={(e) => {
+                const value = Number(e.target.value)
+
+                if (value > 24) {
+                  setUpdatedHours(24)
+                } else if (value < 1) {
+                  setUpdatedHours(1)
+                } else {
+                  setUpdatedHours(e.target.value)
+                }
+              }}
             />
           </label>
           <label>

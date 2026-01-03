@@ -3,26 +3,22 @@ import './About.css'
 const About = () => {
   return (
     <div className='aboutcontainer'>
-      <h1>About us</h1>
       <h2>
-        At JARAMA, we combine great food with smart management. Our team is at
-        the heart of everything we do, and we make sure every detail is well
-        organized:
+        At Jarama Catering, we specialize in delivering high-quality food and
+        exceptional service for events of all sizes.
       </h2>
 
+      <p>
+        With years of experience in the hospitality industry, our team is
+        committed to creating memorable culinary experiences while maintaining
+        the highest standards of organization and professionalism.
+      </p>
       <div className='aboutlist'>
         <ul>
-          <li>
-            👨‍🍳 Staff Management – keep track of staff details, duties, and extra
-            hours
-          </li>
-          <li>
-            📅 Events – plan upcoming restaurant events and team activities...
-          </li>
-          <li>
-            📦Stock Control – manage product details and inventory to ensure
-            freshness.
-          </li>
+          <li>🍽️ 🍽️ Professional catering for private and corporate events</li>
+          <li>👨‍🍳 👨‍🍳👨‍🍳 Experienced chefs and service staff</li>
+          <li>📍 📍 Customized menus tailored to every occasion</li>
+          <li>⭐ ⭐ Commitment to quality, teamwork, and excellence</li>
         </ul>
       </div>
     </div>

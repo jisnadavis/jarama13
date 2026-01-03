@@ -38,7 +38,7 @@ export const Header = () => {
   return (
     <header>
       <img
-        src='https://restaurantevivero.es/wp-content/uploads/2023/07/wired-outline-520-plate-fork-knife.gif'
+        src='https://www.creativefabrica.com/wp-content/uploads/2023/04/24/restaurant-logo-design-Graphics-67998518-2-580x405.jpg'
         alt='jarama-logo'
         className='logo'
       />
@@ -61,7 +61,7 @@ export const Header = () => {
                 className={({ isActive }) => (isActive ? 'active' : '')}
                 onClick={closeMenu}
               >
-                About
+                AboutUs
               </NavLink>
             </li>
           )}

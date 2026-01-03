@@ -1,6 +1,6 @@
 .Homecontainer {
   position: absolute;
-  top: 90px;
+  top: 100px;
   text-align: center;
   width: 100%;
   display: flex;
@@ -12,89 +12,129 @@
   text-decoration-style: double;
   text-shadow: 5px 5px 5px gray;
   position: absolute;
-  top: 100px;
+  animation: headerAnimation 3s ease-in-out infinite;
+  top: 50px;
+  font-size: 50px;
 }
-.background-image {
-  width: 100%;
-  height: 74svh;
-  opacity: 0.5;
-}
-.animation-container {
-  overflow-x: hidden;
-  font-family: Helvetica;
-  position: absolute;
-  top: 240px;
-  color: #fff;
-  background: #b39b9b;
-  margin: 20px 0px;
-}
-.animation-container > div {
-  width: 100%;
-
-  text-align: center;
-  animation: gradient 2.4s infinite ease-in-out;
-  letter-spacing: 10px;
-  white-space: nowrap;
-  font-size: 20px;
-  text-indent: 10px;
-}
-.a01 {
-  animation-delay: 0.1s;
-}
-.a02 {
-  animation-delay: 0.2s;
-}
-
-@keyframes gradient {
-  0% {
-    letter-spacing: 4px;
-    text-indent: 10px;
-  }
-  40% {
-    letter-spacing: 10px;
-    text-indent: 50px;
-  }
-
-  80% {
-    letter-spacing: 4px;
-    text-indent: 10px;
-  }
-
+@keyframes headerAnimation {
+  0%,
   100% {
-    letter-spacing: 4px;
-    text-indent: 10px;
+    color: rgb(37, 36, 36);
+  }
+  50% {
+    color: rgb(255, 255, 255);
   }
 }
-@media (max-width: 900px) {
-  .animation-container {
-    width: 100%;
+.Homecontainer h2 {
+  position: absolute;
+  top: 130px;
+  font-size: 18px;
+  color: rgb(163, 85, 85);
+}
+.description {
+  position: absolute;
+  top: 200px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 20px;
+}
+.details {
+  background-color: white;
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  height: 300px;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: space-evenly;
+  gap: 10px;
+}
+.details p {
+  font-size: 16px;
+  color: rgb(100, 100, 100);
+}
+
+.details button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.imagehome {
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  animation: fade 5s infinite;
+  border-radius: 10px;
+}
+.imagehome1 {
+  height: 150px;
+  background-image: url('https://media.licdn.com/dms/image/v2/D4D12AQEKedoheRtmvQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1689331972948?e=2147483647&v=beta&t=NhaD9ELm-aXHXSycmxPd2wpy7TTihkjzUQtRhivJZvw');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 250px;
+  border-radius: 10px;
+}
+@keyframes fade {
+  0% {
+    background-image: url('https://restaurantemarisol.com/wp-content/uploads/2023/10/claves-para-elegir-un-buen-catering-de-bodas.jpg');
+  }
+
+  50% {
+    background-image: url('https://img.freepik.com/foto-gratis/gente-celebrando-fiesta_53876-14410.jpg?semt=ais_hybrid&w=740&q=80');
+  }
+  100% {
+    background-image: url('https://www.gaucatering.com/wp-content/uploads/2020/05/Catering-barcelona.jpg');
   }
 }
-@media (max-width: 532px) {
-  .Homecontainer {
+@media (max-width: 731px) {
+  .Homecontainer h1 {
+    font-size: 30px;
+    top: 70px;
+  }
+  .Homecontainer h2 {
+    top: 120px;
+    font-size: 14px;
+  }
+  .description {
+    top: 160px;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+@media (max-width: 455px) {
+  .Homecontainer h1 {
+    font-size: 25px;
+    top: 90px;
+  }
+  .Homecontainer h2 {
+    top: 140px;
+    font-size: 12px;
+  }
+  .description {
     top: 180px;
+    flex-direction: column;
+    gap: 20px;
   }
-  .animation-container {
-    width: 80%;
+  .details {
+    width: 300px;
+    height: fit-content;
+    padding: 20px;
   }
-  @keyframes gradient {
-    0% {
-      letter-spacing: 1px;
-      text-indent: 10px;
-    }
-    40% {
-      letter-spacing: 3px;
-      text-indent: 50px;
-    }
-
-    80% {
-      letter-spacing: 1px;
-      text-indent: 10px;
-    }
-
-    100% {
-      letter-spacing: 1px;
-      text-indent: 10px;
-    }
+  .imagehome {
+    width: 250px;
+    height: 150px;
   }
 }
